@@ -12,7 +12,7 @@ Singleton.prototype.toString = function(){
 var s1 = new Singleton(); //using Singleton's constructor to create Singleton Object
 var s2 = new Singleton();
 
-console.log(s1==s2)
+console.log(s1===s2) //compare s1 and s2 memorry address
 console.log(s2.toString())
 
 -----out put--------
