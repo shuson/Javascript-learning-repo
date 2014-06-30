@@ -35,3 +35,10 @@ promise.then(function(result) {
 the first parameter of function ```then``` is ```Promise``` status ```onFilfulled```, and the parameter of it self, is the value return from ```onFulfilled``` function, which is very important.
 
 
+For the sake of getting the value from a promised method, you have do this
+
+```
+var value;
+
+promise.then(funtion(result){value = result;})
+```
