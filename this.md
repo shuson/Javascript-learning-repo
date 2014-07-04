@@ -25,12 +25,13 @@ ES5 注意: 在严格模式下（strict mode），不存在全局变量。 这�
 如果函数倾向于和 new 关键词一块使用，则我们称这个函数是 构造函数。 在函数内部，this 指向新创建的对象。
 
 显式的设置 this
-
+```
 function foo(a, b, c) {}
 
 var bar = {};
 foo.apply(bar, [1, 2, 3]); // 数组将会被扩展，如下所示
 foo.call(bar, 1, 2, 3); // 传递到foo的参数是：a = 1, b = 2, c = 3
+```
 当使用 Function.prototype 上的 call 或者 apply 方法时，函数内的 this 将会被 显式设置为函数调用的第一个参数。
 
 因此函数调用的规则在上例中已经不适用了，在foo 函数内 this 被设置成了 bar。
