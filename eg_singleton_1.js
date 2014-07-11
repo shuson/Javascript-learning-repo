@@ -1,18 +1,11 @@
-var Singleton = {
-    __name:'I am singleton created only once!', //by my habit properties start with __ are namely private
-    toString: function(){
-        return this.__name; //this is important, since the __name can only be accessed by its own memory owner
-    }
+function Singleton(){
+    if (arguments.callee.instance)
+        return arguments.callee.instance;
+    arguments.callee.instance = this;
 }
 
 
-var s1 = Singleton;
-var s2 = Singleton;
-
-console.log(s1.toString());
-console.log(s2.toString());
-
----Out put---
-
-I am singleton created only once!
-I am singleton created only once!
+Singleton.getInstance = function() {
+    var singleton = new Singleton();
+    return singleton;
+};
