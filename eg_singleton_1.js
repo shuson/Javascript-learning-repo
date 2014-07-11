@@ -11,7 +11,7 @@ Singleton.getInstance = function() {
     return singleton;
 };
 
-var obj1 = new Singleton();
-var obj2 = new SIngleton();
+var obj1 = Singleton.getInstance();
+var obj2 = Singleton.getInstance();
 
 console.log(obj1 === obj2) // true
