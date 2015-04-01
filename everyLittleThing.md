@@ -10,4 +10,4 @@
       console.log(i) //i=9
   }```
   
-* 
+* How to adapt to the ecosystem, and get to know how it works, then find out the profit point
